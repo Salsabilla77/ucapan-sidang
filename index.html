@@ -1,243 +1,481 @@
-<!DOCTYPE html>
-<html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Selamat Atas Sidangmu 🎓</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Confetti -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <title>Selamat Sidang 🎓</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-body{
-    background:linear-gradient(-45deg,#6C63FF,#4FACFE,#6DD5FA,#A18CD1);
-    background-size:400% 400%;
-    animation:gradient 15s ease infinite;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-    color:white;
-    position:relative;
-}
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
 
-@keyframes gradient{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
 
-.card{
-    width:90%;
-    max-width:760px;
-    background:rgba(255,255,255,.15);
-    backdrop-filter:blur(18px);
-    border-radius:25px;
-    padding:40px;
-    text-align:center;
-    box-shadow:0 20px 50px rgba(0,0,0,.25);
-    animation:fade .8s;
-}
+    <style>
 
-@keyframes fade{
-from{
-opacity:0;
-transform:translateY(30px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
+        /* =========================
+           PART 4 - CSS DESIGN
+        ========================== */
 
-h1{
-    font-size:2.6rem;
-    margin-bottom:15px;
-}
 
-.subtitle{
-    font-size:1.1rem;
-    line-height:1.8;
-    opacity:.95;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-#typing{
-    margin:35px auto;
-    color:#FFF176;
-    font-size:1.45rem;
-    font-weight:600;
-    min-height:95px;
-}
 
-button{
-    padding:15px 30px;
-    border:none;
-    border-radius:50px;
-    background:#FFD54F;
-    color:#222;
-    cursor:pointer;
-    font-size:16px;
-    font-weight:bold;
-    transition:.3s;
-}
 
-button:hover{
-    transform:scale(1.05);
-    background:white;
-}
+        body {
 
-.footer{
-    margin-top:35px;
-    font-size:.95rem;
-    opacity:.9;
-    line-height:1.7;
-}
+            min-height: 100vh;
 
-.star{
-    position:absolute;
-    background:white;
-    border-radius:50%;
-    opacity:.7;
-    animation:twinkle 2s infinite alternate;
-}
+            display: flex;
 
-@keyframes twinkle{
-from{opacity:.2;}
-to{opacity:1;}
-}
-</style>
+            justify-content: center;
+
+            align-items: center;
+
+
+            background: linear-gradient(
+                135deg,
+                #ffd6e8,
+                #dff5ff
+            );
+
+
+            font-family: 'Poppins', sans-serif;
+
+
+            padding: 20px;
+
+        }
+
+
+
+        .container {
+
+            width: 100%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
+
+
+        .card {
+
+
+            width: 100%;
+
+            max-width: 400px;
+
+
+            background: white;
+
+
+            padding: 35px 25px;
+
+
+            border-radius: 25px;
+
+
+            text-align: center;
+
+
+            box-shadow:
+            0 10px 30px rgba(0,0,0,0.12);
+
+
+            animation: muncul 0.8s ease;
+
+
+        }
+
+
+
+        .emoji {
+
+            font-size: 55px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        h1 {
+
+            font-size: 28px;
+
+            color: #333;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        h2 {
+
+            font-size: 22px;
+
+            color: #555;
+
+            margin-top: 20px;
+
+        }
+
+
+
+        p {
+
+            font-size: 15px;
+
+            line-height: 1.7;
+
+            color: #555;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        .small-text {
+
+            font-size: 13px;
+
+            font-style: italic;
+
+        }
+
+
+
+        .quote {
+
+
+            background: #fff2f8;
+
+
+            padding: 15px;
+
+
+            border-radius: 15px;
+
+
+            font-size: 14px;
+
+
+            margin: 20px 0;
+
+
+            font-style: italic;
+
+
+            color: #666;
+
+        }
+
+
+
+        button {
+
+
+            border: none;
+
+
+            background: #ff7eb3;
+
+
+            color: white;
+
+
+            padding: 14px 30px;
+
+
+            border-radius: 30px;
+
+
+            font-size: 16px;
+
+
+            font-weight: 600;
+
+
+            cursor: pointer;
+
+
+            transition: 0.3s;
+
+
+        }
+
+
+
+        button:hover {
+
+
+            transform: scale(1.05);
+
+
+        }
+
+
+
+        .hidden {
+
+
+            display: none;
+
+        }
+
+
+
+        @keyframes muncul {
+
+
+            from {
+
+                opacity: 0;
+
+                transform: translateY(30px);
+
+            }
+
+
+            to {
+
+                opacity: 1;
+
+                transform: translateY(0);
+
+            }
+
+        }
+
+
+
+        /* Tampilan khusus HP */
+
+        @media(max-width:480px){
+
+
+            .card {
+
+                padding: 30px 20px;
+
+            }
+
+
+            h1 {
+
+                font-size: 24px;
+
+            }
+
+
+            .emoji {
+
+                font-size: 45px;
+
+            }
+
+
+            p {
+
+                font-size: 14px;
+
+            }
+
+
+            button {
+
+                width: 100%;
+
+            }
+
+
+        }
+
+
+
+    </style>
+
+
 </head>
 
 <body>
 
-<div class="card">
 
-<h1>🎉 Selamat Atas Sidangmu! 🎓</h1>
+    <!-- PEMBUKA -->
 
-<p class="subtitle">
-Hari ini adalah bukti bahwa kerja keras, doa, dan perjuanganmu tidak sia-sia.
-Terima kasih telah bertahan sampai di titik ini.
-Kini, satu langkah lagi menuju hari wisuda.
-</p>
+<div class="container">
 
-<div id="typing"></div>
+    <div class="card opening-card" id="openingCard">
 
-<button onclick="pesanBaru()">
-💙 Pesan Selanjutnya
-</button>
+        <div class="emoji">
+            🎓✨
+        </div>
 
-<div class="footer">
-🌸 Untuk seluruh teman seangkatan...<br><br>
+        <h1>
+            Hei, kamu! 👀
+        </h1>
 
-Selamat atas pencapaian luar biasa ini.
-Semoga setiap revisi dipermudah, segala urusan diselesaikan dengan lancar,
-dan langkah kalian setelah lulus dipenuhi keberkahan.
+        <p>
+            Ada sesuatu yang spesial buat kamu...
+            <br>
+            Tapi jangan langsung lihat ya 🤭
+        </p>
 
-Terima kasih telah berjuang bersama.
-Sampai bertemu di hari wisuda,
-dengan toga, senyum, dan cerita baru.
+        <p class="small-text">
+            (tenang, bukan tagihan kok 😆)
+        </p>
 
-🤍🎓
+        <button onclick="openMessage()">
+            Buka Pesan 💌
+        </button>
+
+    </div>
+
 </div>
 
+<!-- PESAN UTAMA -->
+
+<div class="container">
+
+    <div class="card message-card hidden" id="messageCard">
+
+        <div class="emoji">
+            🎉🎓
+        </div>
+
+
+        <h1>
+            Selamat Sidang! 🥳
+        </h1>
+
+
+        <p>
+            Akhirnya hari yang ditunggu-tunggu datang juga ✨
+        </p>
+
+
+        <p>
+            Semua perjuangan, revisi, rasa lelah,
+            dan momen ingin menyerah berhasil kamu lewati.
+        </p>
+
+
+        <p>
+            Hari ini menjadi bukti kalau kamu mampu
+            menyelesaikan satu tahap besar dalam hidupmu.
+        </p>
+
+
+        <div class="quote">
+
+            "Jangan lupa untuk bangga pada diri sendiri,
+            karena kamu sudah berhasil sampai sejauh ini." 🤍
+
+        </div>
+
+
+        <p>
+            Semoga langkah berikutnya membawa lebih banyak
+            kesuksesan dan cerita indah.
+        </p>
+
+
+        <h2>
+            Selamat atas pencapaianmu! 🎓✨
+        </h2>
+
+
+        <button onclick="showConfetti()">
+            Rayakan Lagi 🎉
+        </button>
+
+
+    </div>
+
 </div>
+
 
 <script>
 
-const pesan = [
+    /* =========================
+       PART 5 - JAVASCRIPT
+    ========================== */
 
-"✨ Selamat! Hari ini kamu membuktikan bahwa perjuanganmu tidak sia-sia.",
 
-"🎓 Skripsi mungkin telah selesai, tetapi mimpi-mimpimu baru saja dimulai.",
+    function openMessage() {
 
-"💙 Kamu berhasil melewati salah satu tantangan terbesar selama kuliah. Bangga padamu!",
 
-"🌈 Nikmati momen ini. Kamu pantas merayakan setiap langkah yang telah ditempuh.",
+        // sembunyikan halaman pembuka
+        document.getElementById("openingCard").style.display = "none";
 
-"🏆 Tidak semua orang mampu bertahan sejauh ini. Selamat atas pencapaianmu!",
 
-"🌸 Semoga ilmu yang kamu peroleh menjadi berkah dan membawa manfaat bagi banyak orang.",
+        // tampilkan pesan utama
+        const messageCard = document.getElementById("messageCard");
 
-"🎉 Hari ini adalah awal dari perjalanan baru. Teruslah melangkah dengan percaya diri.",
 
-"🤍 Terima kasih telah berjuang bersama. Sampai bertemu di hari wisuda."
+        messageCard.classList.remove("hidden");
 
-];
 
-let index=0;
+        // jalankan confetti
+        showConfetti();
 
-function ketik(teks){
 
-let i=0;
+    }
 
-document.getElementById("typing").innerHTML="";
 
-let typing=setInterval(()=>{
 
-document.getElementById("typing").innerHTML+=teks.charAt(i);
+    function showConfetti(){
 
-i++;
 
-if(i>=teks.length){
+        const duration = 3000;
 
-clearInterval(typing);
+        const animationEnd = Date.now() + duration;
 
-}
 
-},35);
+        const interval = setInterval(function(){
 
-}
 
-function pesanBaru(){
+            if(Date.now() > animationEnd){
 
-index=Math.floor(Math.random()*pesan.length);
+                clearInterval(interval);
 
-ketik(pesan[index]);
+                return;
 
-}
+            }
 
-window.onload=()=>{
 
-ketik(pesan[0]);
+            confetti({
 
-confetti({
-particleCount:180,
-spread:120,
-origin:{y:0.6}
-});
+                particleCount: 80,
 
-}
+                spread: 100,
 
-// bintang
-for(let i=0;i<45;i++){
+                origin: {
 
-let s=document.createElement("div");
+                    x: Math.random(),
 
-s.className="star";
+                    y: 0.6
 
-s.style.width=Math.random()*4+2+"px";
+                }
 
-s.style.height=s.style.width;
+            });
 
-s.style.left=Math.random()*100+"%";
 
-s.style.top=Math.random()*100+"%";
+        }, 300);
 
-s.style.animationDuration=(Math.random()*2+1)+"s";
 
-document.body.appendChild(s);
+    }
 
-}
 
 </script>
 
